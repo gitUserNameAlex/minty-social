@@ -1,0 +1,75 @@
+.navbar {
+    background-color: #30D5C8;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+    padding: 20px 30px;
+}
+
+.navbarLink {
+    color: white;
+	text-decoration: none;
+	transition: .25s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	
+	li {
+		margin-left: .75em;
+		margin-right: .75em;
+	}
+	
+	&:hover {
+		a {
+			color: #86EAE3;
+			&:hover {
+				color: #4275DB;
+				box-shadow: 0 2px 0 0 currentcolor;
+			}
+		}
+	}
+}
+
+.navbarUser {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.navbarUserText {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbarUserImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbarSignOut {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-left: 30px;
+    width: 80px;
+    padding: 10px 0;
+    transition: 0.4s;
+    color: white;
+    background-color: #108A81;
+}
+
+.navbarSignOut:hover {
+    color: white;
+    box-shadow: 0 0 20px white;
+    background-color: #4275DB;
+}
