@@ -7,8 +7,7 @@ import { collection, addDoc } from 'firebase/firestore'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { db } from '../../config/firebase'
 import { auth } from '../../config/firebase'
-//addDoc - добавить документ(т.е. пост)
-//collection - posts DB
+import styles from './CreatePostForm.module.css'
 
 interface FormData {
     title: string,
@@ -18,7 +17,7 @@ interface FormData {
 const CreatePostForm = () => {
     const navigate = useNavigate()
 
-    //Here we also need user to send it to db
+    //Here we also need user to send it's data to db
     const [user] = useAuthState(auth)
 
     //form structure and validation
@@ -50,13 +49,40 @@ const CreatePostForm = () => {
     const postsCollectionRef = collection(db, 'posts')
 
   return (
-		<form onSubmit={handleSubmit(onCreatePost)}>
-			<input type='text' placeholder='Title...' {...register('title')} />
-			<p style={{ color: 'orange' }}>{errors.title?.message}</p>
-			<textarea placeholder='Description...' {...register('description')} />
-			<p style={{ color: 'orange' }}>{errors.description?.message}</p>
-			<input type='submit' />
-		</form>
+		<div className={styles.postContainer}>
+			<p className={styles.postContainerText}>Create Post</p>
+			<form onSubmit={handleSubmit(onCreatePost)}>
+				<div className={styles.postBox}>
+					<input
+						type='text'
+						{...register('title')}
+						required={true}
+						autoComplete='off'
+						className={styles.postFormInput}
+					/>
+					<label className={styles.postFormLabel}>Title</label>
+				</div>
+				{/* <p style={{ color: 'orange' }}>{errors.title?.message}</p> */}
+				<div className={styles.postBox}>
+					<input
+						type='text'
+						{...register('description')}
+						required={true}
+						autoComplete='off'
+						className={styles.postFormInput}
+					/>
+					<label className={styles.postFormLabel}>Description</label>
+				</div>
+				{/* <p style={{ color: 'orange' }}>{errors.description?.message}</p> */}
+				<button type='submit' className={styles.postFormBtn}>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					Create
+				</button>
+			</form>
+		</div>
 	)
 }
 

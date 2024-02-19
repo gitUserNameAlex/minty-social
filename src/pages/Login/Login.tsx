@@ -1,7 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { auth, provider } from '../config/firebase'
+import { auth, provider } from '../../config/firebase'
 import { signInWithPopup } from 'firebase/auth'
+import styles from './Login.module.css'
 
 const Login = () => {
 
@@ -9,16 +10,14 @@ const Login = () => {
 
     const googleSignIn = async () => {
         const result = await signInWithPopup(auth, provider)
-        console.log(result)
         navigate('/')
     }
 
 
   return (
-    <div>
-      <h1>Login page</h1>
-      <h1>Here you can sign in with google</h1>
-      <button onClick={googleSignIn}>Sign in</button>
+    <div className={styles.login}>
+      <p className={styles.loginText}>Here you can sign in with Google</p>
+      <button onClick={googleSignIn} className={styles.loginBtn}>Sign in</button>
     </div>
   )
 }

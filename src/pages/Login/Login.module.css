@@ -1,0 +1,44 @@
+.login {
+    padding-top: 20vh;
+}
+
+.loginText {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.loginBtn {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 400;
+    width: 80px;
+    padding: 10px 0;
+    transition: 0.4s;
+    color: white;
+    background-color: #108A81;
+}
+
+.loginBtn:hover {
+    color: white;
+    box-shadow: 0 0 20px white;
+    background-color: #4275DB;
+}
+
+@media (max-width: 500px) {
+    .loginText {
+        font-size: 20px;
+    }
+    .loginBtn {
+        width: 70px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .loginText {
+        font-size: 18px;
+    }
+}

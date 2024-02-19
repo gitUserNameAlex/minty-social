@@ -1,0 +1,71 @@
+.about {
+    padding-top: 20vh;  
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.aboutText {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.aboutAuthor {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .about {
+    width: 80vw;
+  }
+
+  .aboutText {
+    font-size: 22px;
+}
+
+.aboutAuthor {
+    font-size: 18px;
+}
+}
+
+@media (max-width: 600px) {
+
+  .aboutText {
+    font-size: 20px;
+}
+
+.aboutAuthor {
+    font-size: 16px;
+}
+}
+
+@media (max-width: 500px) {
+  .about {
+    width: 90vw;
+  }
+
+  .aboutText {
+    font-size: 18px;
+}
+
+.aboutAuthor {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 400px) {
+  .about {
+    width: 95vw;
+  }
+
+  .aboutText {
+    font-size: 16px;
+}
+
+.aboutAuthor {
+    font-size: 12px;
+}
+}

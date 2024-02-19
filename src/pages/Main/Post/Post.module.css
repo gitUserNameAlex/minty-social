@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.post {
+    border-radius: 16px;
+    background: rgba(0,0,0,.5);
+    -webkit-box-shadow: 11px 13px 17px 2px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 11px 13px 17px 2px rgba(0, 0, 0, 0.23);
+    box-shadow: 11px 13px 17px 2px rgba(0, 0, 0, 0.23);
+	min-width: 600px;
+    padding: 5px 0px;
+    margin: 0 auto;
+    color: white;
+}
+
+.postTitle {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.postDescription {
+    font-size: 18px;
+}
+
+
+.postBtn {
+    font-family: 'Montserrat', sans-serif;
+    appearance: none;
+    background: rgba(48,213,201,1);
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    min-width: 0;
+    outline: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.postBtn:disabled {
+    pointer-events: none;
+}
+
+.postBtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.postBtn:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+@media (max-width: 750px) {
+    .post {
+        min-width: 450px;
+    }
+    .postTitle {
+        font-size: 20px;
+    }
+    
+    .postDescription {
+        font-size: 14px;
+    }
+
+    .postUsername {
+        font-size: 14px;
+    }
+    .postLikes {
+        font-size: 14px;
+    }
+    .postBtn {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .post {
+        min-width: 350px;
+    }
+    .postTitle {
+        font-size: 18px;
+    }
+    
+    .postDescription {
+        font-size: 12px;
+    }
+
+    .postUsername {
+        font-size: 12px;
+    }
+    .postLikes {
+        font-size: 12px;
+    }
+    .postBtn {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .post {
+        min-width: 280px;
+    }
+    .postTitle {
+        font-size: 18px;
+    }
+    
+    .postDescription {
+        font-size: 12px;
+    }
+
+    .postUsername {
+        font-size: 12px;
+    }
+    .postLikes {
+        font-size: 12px;
+    }
+    .postBtn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

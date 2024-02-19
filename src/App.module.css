@@ -2,7 +2,9 @@
 
 
 .App {
-  /* background-color: #51EDB4; */
+  min-height: 100vh;
+  background: rgb(16,138,129);
+  background: linear-gradient(0deg, rgba(16,138,129,1) 0%, rgba(48,213,201,1) 50%, rgba(98,234,224,1) 100%);
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
